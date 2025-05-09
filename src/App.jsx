@@ -34,12 +34,10 @@ function App() {
   };
 
   return (
-    <>
-      <header>
-        <SearchBar search={handleSearch} />
-      </header>
+    <div className="container">
+      <SearchBar search={handleSearch} />
       <ImageGallery data={data} />
-    </>
+    </div>
   );
 }
 
