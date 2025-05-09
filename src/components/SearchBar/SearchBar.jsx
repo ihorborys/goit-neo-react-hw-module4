@@ -19,7 +19,6 @@ const SearchBar = ({ search }) => {
             placeholder="Search images and photos"
           />
           <button className={styles.button} type="submit">
-            {/*<span className={styles.span}>Search</span>*/}
             <MdOutlineImageSearch className={styles.icon} />
           </button>
         </Form>
