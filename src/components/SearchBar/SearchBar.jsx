@@ -2,7 +2,7 @@ import { Field, Form, Formik } from "formik";
 import styles from "./SearchBar.module.css";
 import { MdOutlineImageSearch } from "react-icons/md";
 
-const SearchBar = ({ search }) => {
+const SearchBar = ({ search, isDisabled }) => {
   const handleSubmit = (values) => {
     search(values.query);
   };
@@ -18,7 +18,7 @@ const SearchBar = ({ search }) => {
             autoFocus
             placeholder="Search images and photos"
           />
-          <button className={styles.button} type="submit">
+          <button className={styles.button} type="submit" disabled={isDisabled}>
             <MdOutlineImageSearch className={styles.icon} />
           </button>
         </Form>
