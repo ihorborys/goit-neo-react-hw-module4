@@ -14,11 +14,11 @@ function App() {
   const handleSearch = async (searchQuery) => {
     try {
       setLoading(true);
+      setErrorMessage("");
+      setData([]);
       const data = await getImages(searchQuery);
       setData(data.results);
-      setErrorMessage("");
     } catch (error) {
-      setData([]);
       setErrorMessage(error.message);
     } finally {
       setLoading(false);
