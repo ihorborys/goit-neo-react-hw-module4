@@ -1,16 +1,16 @@
 import ImageCard from "../ImageCard/ImageCard.jsx";
 import styles from "./ImageGallery.module.css";
 
-const imageGallery = ({ data }) => {
+const ImageGallery = ({ data, openModal }) => {
   return (
     <ul className={styles.list}>
-      {data.map((item) => (
-        <li key={item.id} className={styles.imageItem}>
-          <ImageCard item={item} />
+      {data.map((image) => (
+        <li key={image.id} className={styles.imageItem}>
+          <ImageCard image={image} openModal={openModal} />
         </li>
       ))}
     </ul>
   );
 };
 
-export default imageGallery;
+export default ImageGallery;
